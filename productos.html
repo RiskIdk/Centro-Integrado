@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de EPP &amp; Productos | Centro Integrado 360</title>
+  <meta name="description"
+    content="Explora el catálogo completo de equipos de protección personal (EPP) de Grupo Renee. Guantes, protección auditiva, visual y calzado de seguridad." />
+  <meta name="theme-color" content="#134295" />
+
+  <meta property="og:title" content="Catálogo de EPP | Centro Integrado 360" />
+  <meta property="og:description"
+    content="Equipos de protección industrial homologados. Arma tu cotización en línea y recíbela en minutos." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap"
+    rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=garet@400,500,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/productos.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Centro Integrado 360 - inicio">
+        <span class="brand-360">360</span>
+        <span class="brand-text">Centro <strong>Integrado</strong></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="dropdown-trigger">Inicio <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#nosotros">¿Quiénes somos?</a>
+            <a href="encuentranos.html">Nuestras sedes</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="nosotros.html" class="dropdown-trigger">Nosotros <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="nosotros.html#quienes">¿Quiénes somos?</a>
+            <a href="nosotros.html#mvv">Misión y Visión</a>
+            <a href="nosotros.html#porque">¿Por qué elegirnos?</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="productos.html" class="dropdown-trigger prod-active">Productos <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="productos.html?cat=guantes-man">Guantes de Manipulación</a>
+            <a href="productos.html?cat=guantes-cor">Guantes Anti-Corte</a>
+            <a href="productos.html?cat=audicion">Protección Auditiva</a>
+            <a href="productos.html?cat=calzado">Calzado de Seguridad</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="encuentranos.html" class="dropdown-trigger">Encuéntranos <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="encuentranos.html#guayaquil-matriz">Guayaquil — Matriz</a>
+            <a href="encuentranos.html#guayaquil-2">Guayaquil — Mucho Lote</a>
+            <a href="encuentranos.html#quito">Quito</a>
+            <a href="encuentranos.html#manta">Manta</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="contacto.html" class="dropdown-trigger">Contacto <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="contacto.html">Formulario de Contacto</a>
+            <a href="index.html#contacto">Canales de WhatsApp</a>
+          </div>
+        </div>
+
+      </nav>
+
+      <div class="header-cta">
+        <button class="cart-trigger" id="cartTrigger" aria-label="Ver cotización">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <a href="index.html#ecosistema" class="btn btn-primary btn-sm">Acceso CRM 360</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO CATALOGO ===================== -->
+    <section class="prod-hero" aria-labelledby="catalog-title">
+      <div class="prod-hero-img">
+        <img src="assets/img/productos-hero.png" alt="Equipamiento de Protección Industrial Grupo Renee" />
+      </div>
+      <div class="container prod-hero-content">
+        <p class="section-kicker section-kicker--light">Catálogo de Productos Grupo Renee</p>
+        <h1 id="catalog-title" class="prod-hero-title">Equipos de Protección Personal</h1>
+        <p class="prod-hero-lead">Selecciona los productos de seguridad industrial que tu empresa necesita, agrégalos a
+          tu cotización y solicítala directamente por WhatsApp.</p>
+      </div>
+    </section>
+
+    <!-- ===================== CUERPO DEL CATALOGO ===================== -->
+    <section class="prod-main">
+      <div class="container prod-layout">
+
+        <!-- Sidebar Filtros -->
+        <aside class="prod-sidebar">
+          <div class="prod-sidebar-box">
+            <h3>Categorías</h3>
+            <ul class="prod-categories" id="categoriesList">
+              <li><button class="prod-cat-btn prod-cat-btn--active" data-filter="all">Todos los Productos</button></li>
+              <li><button class="prod-cat-btn" data-filter="guantes-man">Guantes de Manipulación</button></li>
+              <li><button class="prod-cat-btn" data-filter="guantes-cor">Guantes Anti-Corte y Especiales</button></li>
+              <li><button class="prod-cat-btn" data-filter="guantes-exa">Guantes de Examinación</button></li>
+              <li><button class="prod-cat-btn" data-filter="guantes-tem">Guantes de Temperatura &amp; Soldadura</button>
+              </li>
+              <li><button class="prod-cat-btn" data-filter="audicion">Protección Auditiva</button></li>
+              <li><button class="prod-cat-btn" data-filter="visual">Protección Visual</button></li>
+              <li><button class="prod-cat-btn" data-filter="calzado">Botas y Calzado de Seguridad</button></li>
+            </ul>
+          </div>
+
+          <div class="prod-sidebar-box prod-help-box">
+            <h4>¿Necesitas Asesoría?</h4>
+            <p>Escríbenos directamente para que un técnico en seguridad industrial te recomiende los EPP idóneos.</p>
+            <a href="https://wa.me/593984064249" target="_blank" rel="noopener" class="btn btn-outline btn-sm">WhatsApp
+              Soporte</a>
+          </div>
+        </aside>
+
+        <!-- Listado de Productos -->
+        <div class="prod-content">
+          <div class="prod-toolbar">
+            <span class="prod-count" id="productCount">Mostrando: 33 productos</span>
+            <div class="prod-search-wrap">
+              <input type="text" id="productSearch" placeholder="Buscar por código o nombre..."
+                aria-label="Buscar productos" />
+              <span class="prod-search-icon">🔍</span>
+            </div>
+          </div>
+
+          <div class="prod-grid" id="productGrid">
+            <!-- Productos cargados dinámicamente mediante JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FLOATING CART TRIGGER ===================== -->
+  <button class="floating-cart" id="floatingCartBtn" aria-label="Ver cotización">
+    <span class="cart-icon">🛒</span>
+    <span class="cart-badge" id="floatingCartBadge">0</span>
+  </button>
+
+  <!-- ===================== CART DRAWER (LATERAL) ===================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-labelledby="cartDrawerTitle" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <h2 id="cartDrawerTitle">Tu Cotización</h2>
+      <button class="cart-close" id="cartCloseBtn" aria-label="Cerrar">✕</button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <div class="cart-empty-state" id="cartEmptyState">
+        <div class="cart-empty-icon">🛒</div>
+        <h3>Tu cotización está vacía</h3>
+        <p>Explora el catálogo y añade los EPP necesarios para tu equipo.</p>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- Items inyectados por JS -->
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <form id="quoteForm" class="quote-form">
+        <div class="form-group">
+          <label for="quoteName">Nombre y Apellido *</label>
+          <input type="text" id="quoteName" required placeholder="Ej. " />
+        </div>
+        <div class="form-group">
+          <label for="quoteCompany">Empresa</label>
+          <input type="text" id="quoteCompany" placeholder="Ej. " />
+        </div>
+      </form>
+      <button class="btn btn-primary btn-block" id="btnSendQuote">
+        Solicitar Cotización vía WhatsApp
+      </button>
+      <p class="cart-footer-note">El mensaje se abrirá en WhatsApp con la lista de tus productos.</p>
+    </div>
+  </aside>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-dots" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-360 brand-360--lg">360</span>
+        <p>Centro <strong>Integrado</strong> 360</p>
+        <p class="footer-claim">"La evolución de la salud y seguridad"</p>
+      </div>
+      <div class="footer-logos">
+        <img src="assets/img/logo-ohs.png" alt="OHS Centro Médico" width="716" height="358" loading="lazy" />
+        <img src="assets/img/logo-renee.png" alt="Grupo Renee" width="855" height="339" loading="lazy" />
+      </div>
+      <p class="footer-legal">© <span id="year"></span> Centro Integrado 360 · OHS Centro Médico &amp; Grupo Renee.
+        Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/productos.js"></script>
+</body>
+
+</html>

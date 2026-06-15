@@ -33,7 +33,8 @@
   // Animaciones de entrada al hacer scroll
   var revealTargets = document.querySelectorAll(
     ".section .section-title, .hero-copy, .hero-figure, .brand-card, .mv-card, " +
-    ".serv-card, .ventaja, .suc-card, .eco-card, .con-card, .table-wrap, .sol-list"
+    ".serv-card, .ventaja, .suc-card, .eco-card, .con-card, .table-wrap, .sol-list, " +
+    ".mvv-card, .quienes-copy, .quienes-media"
   );
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -57,7 +58,243 @@
     );
 
     revealTargets.forEach(function (el) { io.observe(el); });
+
+    // Observer separado para .ventaja-item (animación de slide-in)
+    var ventajaItems = document.querySelectorAll(".ventaja-item");
+    if (ventajaItems.length) {
+      var ventajaObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              ventajaObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      ventajaItems.forEach(function (el) { ventajaObserver.observe(el); });
+    }
+  } else {
+    // Sin animaciones: mostrar todo directamente
+    document.querySelectorAll(".ventaja-item").forEach(function(el) {
+      el.classList.add("is-visible");
+    });
   }
+
+
+  // --- MIND MAP SVG DESPLEGABLE ---
+  var mmWrap = document.getElementById("mindmapStage");
+  var mmPanel = document.getElementById("mmDetailPanel");
+  var mmPanelInner = document.getElementById("mmPanelInner");
+  var mmPanelClose = document.getElementById("mmPanelClose");
+  var mmActiveNode = null;
+
+  // Datos de cada nodo: icono, título, descripción y solución
+  var MM_DATA = {
+    accidentes: {
+      icon: "⚠️",
+      title: "Accidentes Laborales",
+      tag: "Salud Ocupacional",
+      desc: "Los accidentes de trabajo representan costos humanos, económicos y legales enormes para las empresas. La falta de vigilancia médica y protocolos adecuados incrementa exponencialmente el riesgo.",
+      solution: "Implementamos exámenes pre/post ocupacionales, vigilancia médica continua y campañas preventivas que detectan riesgos antes de que generen incidentes."
+    },
+    cultura: {
+      icon: "📚",
+      title: "Baja cultura preventiva",
+      tag: "Capacitación",
+      desc: "Cuando los trabajadores no conocen los riesgos ni los procedimientos de seguridad, los accidentes son inevitables. La cultura preventiva es el pilar de cualquier programa de seguridad exitoso.",
+      solution: "Desarrollamos programas de capacitación de brigadistas, primeros auxilios, manejo de extintores y simulacros de evacuación para construir una cultura de seguridad sólida."
+    },
+    riesgos: {
+      icon: "🛡️",
+      title: "Riesgos Industriales",
+      tag: "Seguridad Industrial",
+      desc: "Los entornos industriales presentan riesgos físicos, químicos, mecánicos y biológicos que, sin gestión adecuada, exponen a los trabajadores a daños graves o fatales.",
+      solution: "Identificamos, evaluamos y controlamos los riesgos industriales mediante inspecciones periódicas, EPP especializado y estrategias de mitigación personalizadas para cada sector."
+    },
+    exposicion: {
+      icon: "☢️",
+      title: "Exposición a riesgos laborales",
+      tag: "Salud & Seguridad",
+      desc: "La exposición prolongada a agentes nocivos —ruido, vibraciones, sustancias químicas, temperaturas extremas— genera enfermedades profesionales crónicas y costosas para la empresa.",
+      solution: "Realizamos monitoreo de higiene industrial, evaluamos la exposición de cada puesto de trabajo y establecemos controles de ingeniería y administrativos para reducirla al mínimo."
+    },
+    ausentismo: {
+      icon: "📅",
+      title: "Ausentismo laboral",
+      tag: "Salud Ocupacional",
+      desc: "El ausentismo no controlado reduce la productividad, aumenta la carga sobre otros trabajadores y refleja problemas de salud no atendidos que se agravan con el tiempo.",
+      solution: "Nuestros programas de vigilancia de salud, campañas preventivas y manejo de enfermedades crónicas laborales reducen las ausencias y mejoran el bienestar general del equipo."
+    },
+    epp: {
+      icon: "🦺",
+      title: "Falta de EPP",
+      tag: "Seguridad Industrial",
+      desc: "El uso incorrecto o la ausencia de Equipos de Protección Personal es una de las principales causas de accidentes y enfermedades laborales. La selección incorrecta del EPP puede ser igual de peligrosa.",
+      solution: "Proveemos EPP especializado para cada riesgo —respiratorio, visual, auditivo, mecánico— y capacitamos al personal en su correcto uso, mantenimiento e inspección periódica."
+    },
+    procesos: {
+      icon: "🔗",
+      title: "Procesos fragmentados",
+      tag: "Modelo 360",
+      desc: "Cuando la salud ocupacional y la seguridad industrial operan de forma separada, los datos no se cruzan, se duplican esfuerzos y los trabajadores quedan desprotegidos en las brechas del sistema.",
+      solution: "Nuestro modelo Centro Integrado 360 unifica OHS Centro Médico y Grupo Renee bajo una sola plataforma: misma información, misma estrategia, resultados amplificados."
+    },
+    control: {
+      icon: "📊",
+      title: "Falta de control ocupacional",
+      tag: "Digitalización",
+      desc: "Sin sistemas de registro adecuados, es imposible hacer seguimiento a las condiciones de salud de los trabajadores, cumplir con los reportes al SUT o tomar decisiones preventivas basadas en datos.",
+      solution: "Nuestro CRM 360 e historias clínicas digitales permiten controlar en tiempo real el estado de salud de cada trabajador, con acceso desde cualquier dispositivo y reportes automáticos al SUT."
+    },
+    incumplimiento: {
+      icon: "📋",
+      title: "Incumplimiento normativo",
+      tag: "Cumplimiento Legal",
+      desc: "El incumplimiento de la normativa laboral ecuatoriana —IESS, Ministerio de Trabajo, SUT— puede resultar en sanciones económicas severas, demandas y daño reputacional para la empresa.",
+      solution: "Gestionamos todos los indicadores de salud y seguridad requeridos por la normativa, incluyendo el registro y carga en el SUT, garantizando el cumplimiento legal de tu empresa."
+    }
+  };
+
+  function openMmPanel(nodeKey) {
+    var data = MM_DATA[nodeKey];
+    if (!data || !mmPanel || !mmPanelInner) return;
+
+    mmPanelInner.innerHTML =
+      '<span class="mm-panel-icon">' + data.icon + '</span>' +
+      '<h3 class="mm-panel-title">' + data.title + '</h3>' +
+      '<span class="mm-panel-tag">' + data.tag + '</span>' +
+      '<p class="mm-panel-desc">' + data.desc + '</p>' +
+      '<div class="mm-panel-solution">' +
+        '<strong>Nuestra solución 360</strong>' +
+        data.solution +
+      '</div>';
+
+    mmPanel.classList.add("mm-panel--open");
+  }
+
+  function closeMmPanel() {
+    if (mmPanel) mmPanel.classList.remove("mm-panel--open");
+    // Desactivar nodo previamente activo
+    if (mmActiveNode) {
+      mmActiveNode.classList.remove("mm-branch--active");
+      mmActiveNode = null;
+    }
+  }
+
+  if (mmWrap) {
+
+    // === CONFIGURAR LÍNEAS ===
+    // Las líneas se animarán directamente desde JS para evitar
+    // conflictos de especificidad entre inline styles y reglas CSS.
+    var mmLines = mmWrap.querySelectorAll(".mm-line");
+    mmLines.forEach(function(line) {
+      var len = line.getTotalLength ? line.getTotalLength() : 500;
+      // Estado inicial: oculta (dashoffset = longitud total)
+      line.setAttribute("stroke-dasharray", len);
+      line.setAttribute("stroke-dashoffset", len);
+    });
+
+    // === CONFIGURAR NODOS CON DELAY ESCALONADO ===
+    var mmBranches = mmWrap.querySelectorAll(".mm-branch");
+    mmBranches.forEach(function(branch) {
+      var delay = parseInt(branch.getAttribute("data-delay") || "0", 10);
+      branch.style.transitionDelay = delay + "ms";
+    });
+
+    var mmCenterG = mmWrap.querySelector(".mm-center-g");
+    if (mmCenterG) mmCenterG.style.transitionDelay = "0ms";
+
+    // === FUNCIÓN PARA ACTIVAR ANIMACIÓN ===
+    function activateMindmap() {
+      // 1. Activar nodo central y ramas via CSS
+      mmWrap.classList.add("mm-active");
+
+      // 2. Animar cada línea directamente con JS (escalonado)
+      mmLines.forEach(function(line) {
+        var delay = parseInt(line.getAttribute("data-delay") || "0", 10);
+        setTimeout(function() {
+          line.style.transition = "stroke-dashoffset 0.7s ease, stroke 0.5s ease";
+          line.setAttribute("stroke-dashoffset", "0");
+          line.setAttribute("stroke", "rgba(255, 200, 80, 0.65)");
+        }, delay);
+      });
+    }
+
+    // === OBSERVER — activa al entrar en pantalla ===
+    if ("IntersectionObserver" in window) {
+      var mmObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            activateMindmap();
+            mmObserver.unobserve(mmWrap);
+          }
+        });
+      }, { threshold: 0.10 });
+      mmObserver.observe(mmWrap);
+    } else {
+      // Fallback si no hay IntersectionObserver
+      activateMindmap();
+    }
+
+    // Interactividad: clic en nodos rama para abrir el panel
+    mmBranches.forEach(function(branch) {
+      branch.addEventListener("click", function() {
+        var nodeKey = branch.getAttribute("data-node");
+        if (!nodeKey) return;
+
+        // Si ya estaba activo, cerramos
+        if (mmActiveNode === branch) {
+          closeMmPanel();
+          return;
+        }
+
+        // Desactivar el anterior
+        if (mmActiveNode) mmActiveNode.classList.remove("mm-branch--active");
+
+        // Activar el nuevo
+        branch.classList.add("mm-branch--active");
+        mmActiveNode = branch;
+        openMmPanel(nodeKey);
+      });
+
+      // Accesibilidad teclado
+      branch.addEventListener("keydown", function(e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          branch.click();
+        }
+        if (e.key === "Escape") {
+          closeMmPanel();
+        }
+      });
+    });
+
+    // Cerrar panel
+    if (mmPanelClose) {
+      mmPanelClose.addEventListener("click", closeMmPanel);
+    }
+
+    // Cerrar con Escape
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && mmPanel && mmPanel.classList.contains("mm-panel--open")) {
+        closeMmPanel();
+      }
+    });
+
+    // Cerrar al hacer clic fuera del panel (en el fondo del SVG)
+    var mmSvg = mmWrap.querySelector(".mindmap-full-svg");
+    if (mmSvg) {
+      mmSvg.addEventListener("click", function(e) {
+        // Si el clic fue en el SVG pero no en un branch, cerrar panel
+        if (!e.target.closest(".mm-branch") && mmPanel.classList.contains("mm-panel--open")) {
+          closeMmPanel();
+        }
+      });
+    }
+  }
+
 
   // --- CHATBOX FAQ SYSTEM ---
   var chatbox = document.getElementById("faqChatbox");
