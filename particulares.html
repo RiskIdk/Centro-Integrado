@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Particulares — Centro Integrado 360</title>
+  <meta name="description"
+    content="Servicios médicos de especialidad para particulares en OHS Centro Médico. Consulta externa, diagnóstico y prevención para toda la familia." />
+
+  <!-- Tipografías de marca: Poppins (Google) + Garet (Fontshare) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap"
+    rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=garet@400,500,700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/particulares.css" />
+  <link rel="stylesheet" href="assets/css/styles-responsive.css" />
+  <link rel="stylesheet" href="assets/css/particulares-responsive.css" />
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+      <!-- Logo / Marca -->
+      <a href="index.html" class="brand" aria-label="Centro Integrado 360 - inicio">
+        <span class="brand-360">360</span>
+        <span class="brand-text">Centro <strong>Integrado</strong></span>
+      </a>
+
+      <!-- Navegación Principal -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+
+        <!-- Inicio -->
+        <a href="index.html" class="dropdown-trigger">Inicio</a>
+
+        <!-- Nosotros ▼ -->
+        <div class="nav-item-dropdown">
+          <a href="nosotros.html" class="dropdown-trigger">Nosotros <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="nosotros.html#quienes">¿Quiénes somos?</a>
+            <a href="nosotros.html#mvv">Misión y Visión</a>
+            <a href="nosotros.html#porque">¿Por qué elegirnos?</a>
+          </div>
+        </div>
+
+        <!-- Servicios ▼ -->
+        <div class="nav-item-dropdown">
+          <a href="index.html#servicios" class="dropdown-trigger active">Servicios <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="index.html#servicios">Salud Ocupacional</a>
+            <a href="index.html#servicios">Seguridad Industrial</a>
+            <a href="particulares.html" class="active">Particular</a>
+          </div>
+        </div>
+
+        <!-- Productos ▼ -->
+        <div class="nav-item-dropdown">
+          <a href="productos.html" class="dropdown-trigger">Productos <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="productos.html">Catálogo EPP</a>
+          </div>
+        </div>
+
+        <!-- Encuéntranos -->
+        <a href="encuentranos.html" class="dropdown-trigger">Encuéntranos</a>
+
+        <!-- Contacto ▼ -->
+        <div class="nav-item-dropdown">
+          <a href="contacto.html" class="dropdown-trigger">Contacto <span class="arrow-down">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="contacto.html">Formulario de Contacto</a>
+            <a href="index.html#contacto">Canales de WhatsApp</a>
+          </div>
+        </div>
+
+      </nav>
+
+      <div class="header-cta">
+        <a href="index.html#ecosistema" class="btn btn-ghost btn-sm">Portal pacientes</a>
+        <a href="index.html#ecosistema" class="btn btn-primary btn-sm">Acceso CRM 360</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO PARTICULARES ===================== -->
+    <section class="part-hero" aria-labelledby="part-hero-title">
+      <div class="part-hero-img">
+        <img src="assets/img/particular-hero.png" alt="OHS Especialidades Médicas para Particulares" />
+      </div>
+      <div class="container part-hero-content">
+        <p class="section-kicker section-kicker--light">OHS Centro Médico</p>
+        <h1 id="part-hero-title" class="part-hero-title">Servicios para Particulares</h1>
+        <p class="part-hero-lead">Cuidamos de ti y de tu familia con nuestro staff de médicos especialistas. Descubre
+          nuestras especialidades médicas enfocadas en prevenir, tratar y curar.</p>
+      </div>
+    </section>
+
+    <!-- ===================== GRID ESPECIALIDADES ===================== -->
+    <section class="part-main" aria-label="Especialidades médicas disponibles">
+      <div class="container">
+        <p class="section-kicker">Especialidades OHS</p>
+        <h2 class="section-title">Prevenir, Tratar y Curar</h2>
+
+        <div class="part-grid">
+
+          <!-- 1. Cardiología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🫀</div>
+            <h3>Cardiología</h3>
+            <p>Evaluación y prevención de enfermedades cardiovasculares, electrocardiogramas y control de presión
+              arterial.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Cardiología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2. Gastroenterología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🩺</div>
+            <h3>Gastroenterología</h3>
+            <p>Diagnóstico y tratamiento de afecciones del sistema digestivo, reflujo, gastritis y asesoría digestiva.
+            </p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Gastroenterología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 3. Ginecología y Obstetricia -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🤰</div>
+            <h3>Ginecología y Obstetricia</h3>
+            <p>Control prenatal, salud reproductiva femenina, chequeos preventivos y ecografías especializadas.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Ginecología y Obstetricia">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. Imagenología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🩻</div>
+            <h3>Imagenología</h3>
+            <p>Servicio de diagnóstico por imágenes: ecografías, radiografías y análisis clínicos de alta precisión.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Imagenología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 5. Medicina General -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🩺</div>
+            <h3>Medicina General</h3>
+            <p>Consulta médica primaria, diagnóstico oportuno, control de enfermedades crónicas y chequeos generales.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Medicina General">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 6. Medicina Ocupacional -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🏢</div>
+            <h3>Medicina Ocupacional</h3>
+            <p>Vigilancia de la salud para trabajadores, exámenes de aptitud laboral e ingreso reglamentario al SUT.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Medicina Ocupacional">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 7. Neurología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🧠</div>
+            <h3>Neurología</h3>
+            <p>Diagnóstico y manejo de trastornos del sistema nervioso, migrañas, dolores crónicos y fatiga.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Neurología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 8. Nutrición Clínica -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🍏</div>
+            <h3>Nutrición Clínica</h3>
+            <p>Planes nutricionales personalizados, control de peso, nutrición deportiva y manejo de patologías.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Nutrición Clínica">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 9. Odontología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🦷</div>
+            <h3>Odontología</h3>
+            <p>Salud oral integral, profilaxis, resinas, extracciones, blanqueamiento y odontología preventiva.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Odontología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 10. Otorrinolaringología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">👂</div>
+            <h3>Otorrinolaringología</h3>
+            <p>Evaluación y tratamiento de afecciones de oído, nariz y garganta, y lavado auditivo clínico.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Otorrinolaringología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 11. Pediatría -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">👶</div>
+            <h3>Pediatría</h3>
+            <p>Control del niño sano, vacunas, crecimiento y desarrollo, y atención médica infantil integral.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Pediatría">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 12. Psicología - Sexología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">💬</div>
+            <h3>Psicología - Sexología</h3>
+            <p>Terapia de apoyo emocional, manejo de estrés, terapia de pareja, sexología clínica y bienestar mental.
+            </p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Psicología y Sexología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 13. Traumatología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🦴</div>
+            <h3>Traumatología</h3>
+            <p>Tratamiento de lesiones osteomusculares, esguinces, fracturas, dolores articulares y rehabilitación.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Traumatología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 14. Urología -->
+          <article class="part-card">
+            <div class="part-icon-wrap" aria-hidden="true">🔬</div>
+            <h3>Urología</h3>
+            <p>Chequeo prostático preventivo, tratamiento de infecciones urinarias y patologías del sistema urinario.</p>
+            <div class="part-btn-wrap">
+              <a href="#" class="part-btn" data-specialty="Urología">
+                Agendar Cita <span>→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA BANNER ===================== -->
+    <section class="part-cta-section" aria-label="Agenda tu cita">
+      <div class="container part-cta-content">
+        <h2 class="part-cta-title">¿Listo para agendar tu consulta médica?</h2>
+        <p class="part-cta-lead">Agenda tu cita de especialidad médica en cualquiera de nuestras sedes OHS de manera
+          rápida y directa a través de WhatsApp.</p>
+        <div class="part-cta-btns">
+          <a href="#" class="btn btn-primary part-btn" data-specialty="General">Agendar por WhatsApp</a>
+          <a href="encuentranos.html" class="btn btn-outline"
+            style="border-color: var(--blanco); color: var(--blanco);">Ver Ubicaciones</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== MODAL DE AGENDAMIENTO ===================== -->
+  <div class="part-modal" id="scheduleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="part-modal-overlay" id="modalOverlay"></div>
+    <div class="part-modal-content">
+      <button class="part-modal-close" id="closeModalBtn" aria-label="Cerrar ventana">&times;</button>
+      <h2 id="modalTitle" class="part-modal-title">Agendar Cita</h2>
+      <p class="part-modal-subtitle">Completa tus datos para generar el mensaje de WhatsApp e iniciar tu agendamiento.</p>
+      
+      <form id="scheduleForm" class="part-modal-form">
+        <!-- Especialidad oculta -->
+        <input type="hidden" id="formSpecialty" value="" />
+        
+        <div class="form-group">
+          <label for="formName">Nombres y Apellidos *</label>
+          <input type="text" id="formName" required placeholder="Ej. Juan Pérez" />
+        </div>
+        
+        <div class="form-group">
+          <label for="formBranch">Sede de atención *</label>
+          <select id="formBranch" required>
+            <option value="" disabled selected>Selecciona una sede</option>
+            <option value="Guayaquil — Matriz">Guayaquil — Matriz (Av. Juan Tanca Marengo)</option>
+            <option value="Guayaquil — Mucho Lote">Guayaquil — Mucho Lote</option>
+            <option value="Quito">Quito (Sede OHS)</option>
+            <option value="Manta">Manta (Sede OHS)</option>
+          </select>
+        </div>
+        
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="formDate">Fecha sugerida</label>
+            <input type="date" id="formDate" />
+          </div>
+          <div class="form-group">
+            <label for="formTime">Hora sugerida</label>
+            <select id="formTime">
+              <option value="" selected>Por coordinar</option>
+              <option value="08:00 AM">08:00 AM</option>
+              <option value="08:30 AM">08:30 AM</option>
+              <option value="09:00 AM">09:00 AM</option>
+              <option value="09:30 AM">09:30 AM</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="10:30 AM">10:30 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="11:30 AM">11:30 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="12:30 PM">12:30 PM</option>
+              <option value="01:00 PM">01:00 PM</option>
+              <option value="01:30 PM">01:30 PM</option>
+              <option value="02:00 PM">02:00 PM</option>
+              <option value="02:30 PM">02:30 PM</option>
+              <option value="03:00 PM">03:00 PM</option>
+              <option value="03:30 PM">03:30 PM</option>
+              <option value="04:00 PM">04:00 PM</option>
+              <option value="04:30 PM">04:30 PM</option>
+              <option value="05:00 PM">05:00 PM</option>
+              <option value="05:30 PM">05:30 PM</option>
+              <option value="06:00 PM">06:00 PM</option>
+              <option value="06:30 PM">06:30 PM</option>
+              <option value="07:00 PM">07:00 PM</option>
+            </select>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-submit-wa" style="width: 100%; justify-content: center; margin-top: 1rem;">
+          Confirmar y Enviar por WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-dots" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-360 brand-360--lg">360</span>
+        <p>Centro <strong>Integrado</strong> 360</p>
+        <p class="footer-claim">"La evolución de la salud y seguridad"</p>
+      </div>
+      <div class="footer-logos">
+        <img src="assets/img/logo-ohs.png" alt="OHS Centro Médico" width="716" height="358" loading="lazy" />
+        <img src="assets/img/logo-renee.png" alt="Grupo Renee" width="855" height="339" loading="lazy" />
+      </div>
+      <p class="footer-legal">© <span id="year"></span> Centro Integrado 360 · OHS Centro Médico &amp; Grupo Renee.
+        Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/particulares.js"></script>
+</body>
+
+</html>

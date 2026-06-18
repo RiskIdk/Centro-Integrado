@@ -1,0 +1,28 @@
+/* =========================================================
+   particulares-responsive.css — Estilos responsivos
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .part-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .part-card {
+    padding: 1.25rem;
+  }
+
+  .part-hero-title {
+    font-size: 2rem;
+  }
+
+  .part-cta-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .part-cta-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
