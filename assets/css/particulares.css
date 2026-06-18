@@ -104,8 +104,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
   color: var(--azul);
+  transition: background 0.3s, color 0.3s;
+}
+
+.part-icon-wrap svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s var(--ease);
+}
+
+.part-card:hover .part-icon-wrap {
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.part-card:hover .part-icon-wrap svg {
+  transform: scale(1.1) rotate(4deg);
 }
 
 .part-card h3 {

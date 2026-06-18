@@ -12,7 +12,8 @@
       desc: "Recubiertos de poliuretano. Antiestáticos, electrostáticos con alta resistencia a cortes, abrasión y pinchazos.",
       category: "guantes-man",
       sizes: ["S", "M", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/PUG-17.png"
     },
     {
       id: "550b",
@@ -21,7 +22,8 @@
       desc: "Excelente sensibilidad táctil con gran resistencia a cortes, abrasión y perforaciones. Textura microtexturizada.",
       category: "guantes-man",
       sizes: ["S", "M", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/550b.png"
     },
     {
       id: "500nftd",
@@ -30,7 +32,8 @@
       desc: "Guantes livianos sin costuras con tecnología de espuma punteada en la palma. Mayor agarre y resistencia a cortes.",
       category: "guantes-man",
       sizes: ["S", "M", "L", "XL"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/500NTFD.png"
     },
     {
       id: "300p",
@@ -39,7 +42,8 @@
       desc: "Palma recubierta de goma grabada azul con soporte de algodón/poliéster sin costuras calibre 10. Para ensamble y construcción.",
       category: "guantes-man",
       sizes: ["M", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/300P.png"
     },
 
     // --- GUANTES Y MANGAS ANTI-CORTE ---
@@ -50,7 +54,8 @@
       desc: "Calibre 10 sin costuras. Alta resistencia contra cortes y calor de contacto. Cómodas y flexibles.",
       category: "guantes-cor",
       sizes: ["Estándar"],
-      unit: "unidad"
+      unit: "unidad",
+      img: "assets/img/GUANTES/manga kevlar.png"
     },
     {
       id: "excalibur-ex5",
@@ -59,7 +64,8 @@
       desc: "Mezcla de polietileno de alta densidad (HDPE), nylon y spandex con palma y dedos recubiertos. Alta resistencia al corte.",
       category: "guantes-cor",
       sizes: ["S", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/EXCALIBUR ex5.png"
     },
     {
       id: "pug-611",
@@ -68,7 +74,8 @@
       desc: "Soporte de fibra de HDPE calibre 13 con palma bañada en poliuretano para excelente agarre y sensibilidad.",
       category: "guantes-cor",
       sizes: ["M", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/PUG 611.png"
     },
     {
       id: "excalibur-ex5nff",
@@ -77,7 +84,8 @@
       desc: "Soporte HDPE, nylon y spandex recubierto completamente de nitrilo espumado en palma y dorso. Protección de líquidos y cortes.",
       category: "guantes-cor",
       sizes: ["M", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/EXCALIBUR EX5NFF.png"
     },
     {
       id: "cr336g",
@@ -86,7 +94,8 @@
       desc: "Protección para frío extremo que cumple con la FDA. Textura rugosa de nitrilo ideal para manejo de químicos y alimentos.",
       category: "guantes-cor",
       sizes: ["XS", "S", "M", "L", "XL"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/CR336G.png"
     },
     {
       id: "600kv",
@@ -95,7 +104,8 @@
       desc: "Resistentes al corte, abrasión y perforaciones con tejido de alta visibilidad para entornos de riesgo mecánico.",
       category: "guantes-cor",
       sizes: ["M", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/600kv.png"
     },
 
     // --- GUANTES DE IMPACTO ---
@@ -106,7 +116,8 @@
       desc: "Nylon negro calibre 13 con recubrimiento de nitrilo espumado negro de acabado arenoso para mayor agarre y resistencia a la abrasión.",
       category: "guantes-exa",
       sizes: ["S", "M", "L", "XL"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/UltraTech® UT1950.png"
     },
 
     // --- GUANTES DE EXAMINACIÓN ---
@@ -117,7 +128,8 @@
       desc: "Guantes desechables de grado médico de 9.5 pulgadas. Libres de polvo, mezcla azul de 5 milésimas de espesor.",
       category: "guantes-exa",
       sizes: ["S", "M", "L"],
-      unit: "caja"
+      unit: "caja",
+      img: "assets/img/GUANTES/405PF.png"
     },
     {
       id: "805pf",
@@ -126,7 +138,8 @@
       desc: "Grado examinación, azul, 8 milésimas de espesor y 11 pulgadas de largo. Puntas de los dedos texturizadas, libre de polvo.",
       category: "guantes-exa",
       sizes: ["S", "M", "L"],
-      unit: "caja"
+      unit: "caja",
+      img: "assets/img/GUANTES/805PF.png"
     },
     {
       id: "1005pf",
@@ -135,7 +148,8 @@
       desc: "Grado industrial, sin talco, 9 milésimas y 11 pulgadas. Patrón de microdiamantes en relieve para máximo agarre.",
       category: "guantes-exa",
       sizes: ["S", "M", "L", "XL"],
-      unit: "caja"
+      unit: "caja",
+      img: "assets/img/GUANTES/1005PF.png"
     },
     {
       id: "522",
@@ -144,7 +158,8 @@
       desc: "Guantes sin soporte de 22 milésimas de espesor con diseño diamante elevado. Excelente protección química y resistencia.",
       category: "guantes-exa",
       sizes: ["M", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/522 guantes.png"
     },
 
     // --- GUANTES DE TEMPERATURA & SOLDADURA ---
@@ -155,7 +170,8 @@
       desc: "Cuerpo de nylon calibre 18 sin costuras con doble inmersión de bi-polímero. Resistencia química e hidrocarburos.",
       category: "guantes-tem",
       sizes: ["M", "L"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/MG9648.png"
     },
     {
       id: "9918rint",
@@ -164,7 +180,8 @@
       desc: "Resistentes al calor y químicos, elaborados en neopreno aislado de primera calidad. Longitud de 18 pulgadas.",
       category: "guantes-tem",
       sizes: ["Única"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/9918RINT.png"
     },
     {
       id: "modelo-api",
@@ -173,7 +190,8 @@
       desc: "Fabricado en piel de res split con forro interior resistente a chispas. Indicado para trabajos de soldadura de alto riesgo.",
       category: "guantes-tem",
       sizes: ["Estándar"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/GUANTE APY.png"
     },
     {
       id: "tipo-operador",
@@ -182,7 +200,8 @@
       desc: "Cuero de 1.1 a 1.3 mm en palma, cosido con hilo de algodón, elástico en dorso para ajuste cómodo. Ribete en puño.",
       category: "guantes-tem",
       sizes: ["Estándar"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/GUANTES/guante operador.png"
     },
 
     // --- PROTECCIÓN AUDITIVA ---
@@ -193,7 +212,8 @@
       desc: "Orejera con diadema acolchada para aumentar la comodidad. Atenuación de alto nivel diseñada para reducción de ruido severo.",
       category: "audicion",
       sizes: ["Estándar"],
-      unit: "unidad"
+      unit: "unidad",
+      img: "assets/img/OREJERAS/orejeras premium.png"
     },
     {
       id: "hp-m3",
@@ -202,7 +222,8 @@
       desc: "Diseñadas para acoplarse en cascos rígidos ranurados estándar. Tres posiciones de giro. Cojines de PVC suaves.",
       category: "audicion",
       sizes: ["Estándar"],
-      unit: "unidad"
+      unit: "unidad",
+      img: "assets/img/OREJERAS/orejeras.png"
     },
     {
       id: "hp-s2",
@@ -211,7 +232,8 @@
       desc: "Tapones de silicona de triple falange reutilizables. NRR 26 dB. Protección efectiva y fácil limpieza.",
       category: "audicion",
       sizes: ["Estándar"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/OREJERAS/tapones auditivos.png"
     },
 
     // --- PROTECCIÓN VISUAL ---
@@ -222,7 +244,8 @@
       desc: "Lente único moldeado de curva base 10 con patillas de goma. Visión periférica completa de 180 grados. Anti-empañante.",
       category: "visual",
       sizes: ["Estándar"],
-      unit: "unidad"
+      unit: "unidad",
+      img: "assets/img/GAFAS/gafas seguridad.png"
     },
     {
       id: "bh511af",
@@ -231,7 +254,8 @@
       desc: "Estilo envolvente tradicional con lente de un solo molde de curva base 10. Patillas de goma cómodas. Máxima nitidez.",
       category: "visual",
       sizes: ["Estándar"],
-      unit: "unidad"
+      unit: "unidad",
+      img: "assets/img/GAFAS/gafas transparentes.png"
     },
 
     // --- BOTAS DE PROTECCIÓN ---
@@ -242,16 +266,18 @@
       desc: "Microfibra resistente a la humedad. Suela PU bidensidad, dieléctrica (18 kV, ASTM F2413), puntera composite y construcción Strobel.",
       category: "calzado",
       sizes: ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/BOTAS/Ref. 9350.png"
     },
     {
       id: "ref-9860",
       code: "REF. 9860",
       name: "Bota Steel Worker 5” Alta Durabilidad",
-      desc: "Microfibra de alta calidad resistente a hidrocarburos y humedad. Dieléctrica (18 kV), puntera de seguridad composite liviana.",
+      desc: "Microfibra de alta calidad resistente a hidrocarburos and humedad. Dieléctrica (18 kV), puntera de seguridad composite liviana.",
       category: "calzado",
       sizes: ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/BOTAS/Ref. 9860.png"
     },
     {
       id: "ref-9852",
@@ -260,7 +286,8 @@
       desc: "Cuero semigraso hidrofugado. Suela caucho vulcanizado bidensidad, dieléctrica (18 kV), puntera composite y plantilla antipunzón tejida.",
       category: "calzado",
       sizes: ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/BOTAS/Ref. 9852 CAUCHO-PU.png"
     },
     {
       id: "ref-9850",
@@ -269,7 +296,8 @@
       desc: "Cuero semigraso hidrofugado, suela caucho nitrilo. Dieléctrica (18 kV), puntera composite y plantilla antipunzón tipo Kevlar.",
       category: "calzado",
       sizes: ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/BOTAS/Ref. 9850 CAUCHO-PU.png"
     },
     {
       id: "ref-4306",
@@ -278,7 +306,8 @@
       desc: "Diseño ergonómico para damas en cuero semigraso hidrofugado. Dieléctrica (18 kV), suela caucho nitrilo y puntera composite.",
       category: "calzado",
       sizes: ["35", "36", "37", "38", "39", "40"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/BOTAS/Ref. 4306 para damas.png"
     },
     {
       id: "ref-9368",
@@ -287,7 +316,8 @@
       desc: "Bota en microfibra con suela TPU-PU de inyección directa al corte. Dieléctrica (18 kV), puntera composite y sobreplantilla de poliuretano.",
       category: "calzado",
       sizes: ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/BOTAS/Ref. 9368.png"
     },
     {
       id: "ref-gp101",
@@ -296,7 +326,8 @@
       desc: "Microfibra 2mm con lengüeta fuelle de lona. Puntera composite liviana, suela antideslizante altamente resistente.",
       category: "calzado",
       sizes: ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/BOTAS/Ref.GP101.png"
     },
     {
       id: "ref-9323",
@@ -305,7 +336,8 @@
       desc: "Microfibra calibre 1.8-2.0mm con elástico. Inyección directa al corte, dieléctrica, puntera composite y plantilla antipunzón.",
       category: "calzado",
       sizes: ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
-      unit: "par"
+      unit: "par",
+      img: "assets/img/BOTAS/Ref.9323.png"
     }
   ];
 
@@ -399,6 +431,9 @@
             ${getCategoryName(prod.category)}
           </span>
           <span class="prod-code">${prod.code}</span>
+        </div>
+        <div class="prod-card-img">
+          <img src="${prod.img}" alt="${prod.name}" loading="lazy" />
         </div>
         <h4>${prod.name}</h4>
         <p title="${prod.desc}">${prod.desc}</p>
@@ -677,6 +712,52 @@
     updateCartUi();
     closeDrawer();
   });
+
+  // --- LIGHTBOX DE IMÁGENES (DELEGACIÓN DE EVENTOS) ---
+  var lightbox = document.getElementById("prodLightbox");
+  var lightboxImg = document.getElementById("lightboxImg");
+  var lightboxTitle = document.getElementById("lightboxTitle");
+  var lightboxClose = document.getElementById("lightboxClose");
+
+  if (productGrid && lightbox && lightboxImg && lightboxTitle && lightboxClose) {
+    productGrid.addEventListener("click", function (e) {
+      var imgContainer = e.target.closest(".prod-card-img");
+      if (imgContainer) {
+        var imgEl = imgContainer.querySelector("img");
+        var cardEl = imgContainer.closest(".prod-card");
+        if (imgEl && cardEl) {
+          var titleEl = cardEl.querySelector("h4");
+          var titleText = titleEl ? titleEl.textContent : "";
+          
+          lightboxImg.src = imgEl.src;
+          lightboxImg.alt = imgEl.alt;
+          lightboxTitle.textContent = titleText;
+          
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+        }
+      }
+    });
+
+    lightboxClose.addEventListener("click", function () {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+    });
+
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && lightbox.classList.contains("open")) {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
 
   // Carga inicial
   renderProducts();
