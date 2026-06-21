@@ -2,14 +2,47 @@
    particulares-responsive.css — Estilos responsivos
    ========================================================= */
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @media (max-width: 768px) {
   .part-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .part-card {
-    padding: 1.25rem;
+    padding: 1rem 0.75rem !important;
+    align-items: center !important;
+    text-align: center !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .part-card h3 {
+    font-size: 0.85rem !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    width: 100% !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+  }
+
+  .part-icon-wrap {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .part-icon-wrap img,
+  .part-icon-wrap svg {
+    width: 36px !important;
+    height: 36px !important;
   }
 
   .part-hero-title {

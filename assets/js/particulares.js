@@ -116,6 +116,28 @@
     });
   }
 
+  // --- ACCORDION / COLLAPSIBLE CARDS ---
+  var partCards = document.querySelectorAll(".part-card");
+  partCards.forEach(function (card) {
+    card.addEventListener("click", function (e) {
+      // Si el click fue en el botón de agendar cita, no colapsar la tarjeta
+      if (e.target.closest(".part-btn")) {
+        return;
+      }
+      
+      // Cerrar las otras tarjetas abiertas para un efecto limpio y ordenado
+      partCards.forEach(function (otherCard) {
+        if (otherCard !== card && otherCard.classList.contains("is-expanded")) {
+          otherCard.classList.remove("is-expanded");
+          otherCard.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      var isExpanded = card.classList.toggle("is-expanded");
+      card.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+    });
+  });
+
   // Animación reveal para las tarjetas de especialidad
   var revealEls = document.querySelectorAll(".part-card");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

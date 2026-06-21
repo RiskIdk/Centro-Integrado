@@ -87,7 +87,47 @@
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s ease;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.part-card::after {
+  content: "▾";
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--azul-300);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.part-card.is-expanded::after {
+  transform: rotate(180deg);
+  color: var(--naranja);
+}
+
+.part-card-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.part-card-details-inner {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-top: 0.5rem;
+}
+
+.part-card.is-expanded .part-card-details {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }
 
 .part-card:hover {
@@ -97,8 +137,8 @@
 }
 
 .part-icon-wrap {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   background: var(--azul-050);
   border-radius: var(--radius);
   display: flex;
@@ -110,8 +150,8 @@
 
 .part-icon-wrap svg,
 .part-icon-wrap img {
-  width: 26px;
-  height: 26px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   transition: transform 0.3s var(--ease), filter 0.3s ease;
 }
