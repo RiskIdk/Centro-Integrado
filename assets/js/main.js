@@ -559,4 +559,173 @@
       }, 1500);
     });
   }
+
+  // --- CARRUSEL SLIDER BANNER HOME ---
+  var homeSlider = document.getElementById("homeSlider");
+  var sliderTrack = document.getElementById("sliderTrack");
+  var slides = document.querySelectorAll("#sliderTrack .slide");
+  var prevBtn = document.getElementById("prevSlideBtn");
+  var nextBtn = document.getElementById("nextSlideBtn");
+  var dots = document.querySelectorAll("#sliderDots .dot");
+
+  if (homeSlider && sliderTrack && slides.length > 0) {
+    var currentIndex = 0;
+    var slideCount = slides.length;
+    var startX = 0;
+    var currentTranslate = 0;
+    var prevTranslate = 0;
+    var isDragging = false;
+    var animationID = 0;
+    var autoplayInterval;
+
+    // Inicializar slider
+    updateSliderPosition();
+    startAutoplay();
+
+    // Event Listeners para botones
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function() {
+        prevSlide();
+        resetAutoplay();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function() {
+        nextSlide();
+        resetAutoplay();
+      });
+    }
+
+    // Event Listeners para los dots
+    dots.forEach(function(dot) {
+      dot.addEventListener("click", function(e) {
+        var index = parseInt(e.target.getAttribute("data-index"));
+        goToSlide(index);
+        resetAutoplay();
+      });
+    });
+
+    // Soporte para gestos táctiles (Móviles)
+    homeSlider.addEventListener("touchstart", touchStart);
+    homeSlider.addEventListener("touchend", touchEnd);
+    homeSlider.addEventListener("touchmove", touchMove);
+
+    // Soporte para arrastre de ratón (Desktop)
+    homeSlider.addEventListener("mousedown", touchStart);
+    homeSlider.addEventListener("mouseup", touchEnd);
+    homeSlider.addEventListener("mouseleave", touchEnd);
+    homeSlider.addEventListener("mousemove", touchMove);
+
+    // Evitar comportamiento por defecto en imágenes
+    slides.forEach(function(slide) {
+      slide.addEventListener("dragstart", function(e) { e.preventDefault(); });
+    });
+
+    function touchStart(event) {
+      isDragging = true;
+      startX = getPositionX(event);
+      animationID = requestAnimationFrame(animation);
+      homeSlider.classList.add("grabbing");
+      pauseAutoplay();
+    }
+
+    function touchMove(event) {
+      if (isDragging) {
+        var currentX = getPositionX(event);
+        var diffX = currentX - startX;
+        currentTranslate = prevTranslate + diffX;
+      }
+    }
+
+    function touchEnd() {
+      if (isDragging) {
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+        var movedBy = currentTranslate - prevTranslate;
+
+        // Si se mueve más de 100px, cambia de slide
+        if (movedBy < -100 && currentIndex < slideCount - 1) {
+          currentIndex += 1;
+        } else if (movedBy > 100 && currentIndex > 0) {
+          currentIndex -= 1;
+        }
+
+        goToSlide(currentIndex);
+        homeSlider.classList.remove("grabbing");
+        startAutoplay();
+      }
+    }
+
+    function getPositionX(event) {
+      return event.type.includes("touch") ? event.touches[0].clientX : event.clientX;
+    }
+
+    function animation() {
+      setSliderPosition();
+      if (isDragging) requestAnimationFrame(animation);
+    }
+
+    function setSliderPosition() {
+      sliderTrack.style.transform = "translateX(" + currentTranslate + "px)";
+    }
+
+    function updateSliderPosition() {
+      var width = homeSlider.offsetWidth;
+      currentTranslate = currentIndex * -width;
+      prevTranslate = currentTranslate;
+      sliderTrack.style.transform = "translateX(" + currentTranslate + "px)";
+      updateDots();
+    }
+
+    function updateDots() {
+      dots.forEach(function(dot, index) {
+        if (index === currentIndex) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      });
+    }
+
+    function nextSlide() {
+      if (currentIndex < slideCount - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      goToSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = slideCount - 1;
+      }
+      goToSlide(currentIndex);
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateSliderPosition();
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(nextSlide, 5000);
+    }
+
+    function pauseAutoplay() {
+      clearInterval(autoplayInterval);
+    }
+
+    function resetAutoplay() {
+      pauseAutoplay();
+      startAutoplay();
+    }
+
+    // Manejar redimensionamiento de ventana
+    window.addEventListener("resize", function() {
+      updateSliderPosition();
+    });
+  }
 })();

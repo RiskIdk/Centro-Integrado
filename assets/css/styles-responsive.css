@@ -46,7 +46,8 @@
   }
   
   .serv-grid { grid-template-columns: 1fr; }
-  .eco-grid, .suc-grid, .sol-list { grid-template-columns: 1fr; }
+  .eco-grid, .suc-grid, .sol-list, .mapa-cobertura-grid { grid-template-columns: 1fr; }
+  .sol-list-items { grid-template-columns: 1fr; }
   .section { padding: var(--sp-6) 0; }
   .hero-badge { left: 0; }
   

@@ -108,14 +108,12 @@
   transition: background 0.3s, color 0.3s;
 }
 
-.part-icon-wrap svg {
+.part-icon-wrap svg,
+.part-icon-wrap img {
   width: 26px;
   height: 26px;
-  stroke: currentColor;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: transform 0.3s var(--ease);
+  object-fit: contain;
+  transition: transform 0.3s var(--ease), filter 0.3s ease;
 }
 
 .part-card:hover .part-icon-wrap {
@@ -125,6 +123,11 @@
 
 .part-card:hover .part-icon-wrap svg {
   transform: scale(1.1) rotate(4deg);
+}
+
+.part-card:hover .part-icon-wrap img {
+  transform: scale(1.1) rotate(4deg);
+  filter: brightness(0) invert(1);
 }
 
 .part-card h3 {
