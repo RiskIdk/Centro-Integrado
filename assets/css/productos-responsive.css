@@ -63,6 +63,10 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    width: min(100% - 1.5rem, var(--maxw)) !important;
+  }
+
   .prod-toolbar {
     flex-direction: column;
     align-items: stretch;
@@ -73,33 +77,101 @@
   }
 
   .prod-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
   }
 
   .prod-card {
-    padding: 1.25rem;
+    padding: 0.75rem !important;
+    border-radius: var(--radius) !important;
+    gap: 0.4rem !important;
+    min-width: 0 !important;
+  }
+
+  .prod-card-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.2rem !important;
+    width: 100% !important;
+  }
+
+  .prod-badge {
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.4rem !important;
+    white-space: nowrap !important;
+  }
+
+  .prod-code {
+    font-size: 0.65rem !important;
+  }
+
+  .prod-card-img {
+    height: 110px !important;
+    padding: 0.25rem !important;
+  }
+
+  .prod-card h4 {
+    font-size: 0.8rem !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+  }
+
+  .prod-card p {
+    font-size: 0.7rem !important;
+    line-height: 1.35 !important;
+    height: 2.7em !important;
+    -webkit-line-clamp: 2 !important;
+  }
+
+  .prod-specs {
+    padding-top: 0.3rem !important;
+    gap: 0.25rem !important;
+  }
+
+  .prod-sizes {
+    gap: 0.25rem !important;
+  }
+
+  .size-pill {
+    font-size: 0.65rem !important;
+    padding: 0.15rem 0.35rem !important;
+    min-width: 22px !important;
+    text-align: center !important;
   }
 
   .prod-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.6rem;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.4rem !important;
+    margin-top: auto !important;
   }
 
   .prod-qty {
-    justify-content: center;
-    width: 100%;
+    justify-content: center !important;
+    width: 100% !important;
+    border-radius: var(--radius) !important;
+  }
+
+  .prod-qty .qty-btn {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 0.85rem !important;
   }
 
   .prod-qty .qty-input {
-    flex: 1;
-    width: auto;
-    min-width: 0;
+    height: 28px !important;
+    width: 32px !important;
+    font-size: 0.8rem !important;
+    flex: none !important;
   }
 
   .btn-add-cart {
-    width: 100%;
+    width: 100% !important;
+    padding: 0.45rem 0.6rem !important;
+    font-size: 0.75rem !important;
+    min-height: 32px !important;
   }
 
   .prod-hero-title {

@@ -35,14 +35,14 @@ html, body {
   }
 
   .part-icon-wrap {
-    width: 56px !important;
-    height: 56px !important;
+    width: 72px !important;
+    height: 72px !important;
   }
 
   .part-icon-wrap img,
   .part-icon-wrap svg {
-    width: 36px !important;
-    height: 36px !important;
+    width: 48px !important;
+    height: 48px !important;
   }
 
   .part-hero-title {
