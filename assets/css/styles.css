@@ -1010,6 +1010,96 @@ a.eco-card:hover { transform: translateY(-4px); background: rgba(255,255,255,.12
 .con-list a { color: var(--gris-700); font-weight: 500; overflow-wrap: anywhere; }
 .con-list a:hover { color: var(--azul); }
 
+/* Foco visible consistente en enlaces interactivos */
+.main-nav a:focus-visible,
+a.eco-card:focus-visible,
+.con-list a:focus-visible,
+.brand:focus-visible {
+  outline: 3px solid var(--naranja);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   REDES SOCIALES SECTION (ROYAL BLUE - FLAT)
+   ========================================================= */
+.social-blue-section {
+  background: var(--azul-900);
+  color: var(--blanco);
+  padding: 3.5rem 0;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.social-title {
+  text-align: center;
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--blanco);
+  font-family: var(--font-display);
+}
+.social-grid {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.social-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.social-col h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-body);
+  letter-spacing: 0.03em;
+}
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  transition: transform 0.2s var(--ease), color 0.2s var(--ease);
+}
+.social-links a:hover {
+  color: var(--naranja);
+  transform: translateY(-2px) scale(1.1);
+}
+.social-links a svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .social-grid {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+  .social-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+/* ---------------- Footer ---------------- */
+.site-footer { background: var(--negro); color: var(--blanco); padding: var(--sp-6) 0 var(--sp-4); position: relative; overflow: hidden; }
+.footer-dots { color: var(--naranja); opacity: .25; width: 300px; height: 200px; top: 0; left: 0;
+  -webkit-mask-image: radial-gradient(circle at top left, #000 20%, transparent 70%);
+  mask-image: radial-gradient(circle at top left, #000 20%, transparent 70%); }
+.footer-inner { display: grid; gap: var(--sp-4); position: relative; }
 .footer-brand { display: flex; flex-direction: column; gap: .2rem; }
 .brand-360--lg { font-size: 2.6rem; color: var(--naranja); }
 .footer-brand p { margin: 0; font-family: var(--font-display); }
