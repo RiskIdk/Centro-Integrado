@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/particulares.css" />
   <link rel="stylesheet" href="assets/css/styles-responsive.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
   <link rel="stylesheet" href="assets/css/particulares-responsive.css" />
 </head>
 
@@ -27,21 +28,24 @@
 
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="siteHeader">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-
-      <!-- Logo / Marca -->
       <a href="index.html" class="brand" aria-label="Centro Integrado 360 - inicio">
         <span class="brand-360">360</span>
         <span class="brand-text">Centro <strong>Integrado</strong></span>
       </a>
 
-      <!-- Navegación Principal -->
       <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
 
-        <!-- Inicio -->
-        <a href="index.html" class="dropdown-trigger">Inicio</a>
+        <!-- Inicio ▼ -->
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="dropdown-trigger">Inicio</a>
+          <div class="dropdown-menu">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#nosotros">Nuestra historia</a>
+            <a href="encuentranos.html">Nuestras sedes</a>
+          </div>
+        </div>
 
         <!-- Nosotros ▼ -->
         <div class="nav-item-dropdown">
@@ -55,10 +59,10 @@
 
         <!-- Servicios ▼ -->
         <div class="nav-item-dropdown">
-          <a href="index.html#servicios" class="dropdown-trigger active">Servicios <span class="arrow-down">▾</span></a>
+          <a href="servicios.html" class="dropdown-trigger active">Servicios <span class="arrow-down">▾</span></a>
           <div class="dropdown-menu">
-            <a href="index.html#servicios">Salud Ocupacional</a>
-            <a href="index.html#servicios">Seguridad Industrial</a>
+            <a href="servicios.html#ocupacional">Salud Ocupacional</a>
+            <a href="servicios.html#industrial">Seguridad Industrial</a>
             <a href="particulares.html" class="active">Particular</a>
           </div>
         </div>
@@ -82,6 +86,15 @@
             <a href="index.html#contacto">Canales de WhatsApp</a>
           </div>
         </div>
+
+        <!-- Búsqueda -->
+        <button class="search-trigger-btn" id="searchTriggerBtn" aria-label="Buscar en el sitio">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
 
       </nav>
 
@@ -531,7 +544,7 @@
         <p class="footer-claim">"La evolución de la salud y seguridad"</p>
       </div>
       <div class="footer-logos">
-        <img src="assets/img/logo-ohs.png" alt="OHS Centro Médico" width="716" height="358" loading="lazy" />
+        <img src="assets/img/Iconos/logos/ohs blanco logo.svg" alt="OHS Centro Médico" width="716" height="358" loading="lazy" />
         <img src="assets/img/logo-renee.png" alt="Grupo Renee" width="855" height="339" loading="lazy" />
       </div>
 

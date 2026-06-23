@@ -1,0 +1,374 @@
+/* ==========================================
+   servicios.css — Estilos exclusivos para servicios.html
+   ========================================== */
+
+/* Secciones Principales */
+.servicios-page-section {
+    padding: var(--sp-6) 0;
+    background: var(--blanco);
+}
+
+.servicios-title-block {
+    margin-bottom: var(--sp-5);
+}
+
+.servicios-main-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+
+.servicios-main-title--salud {
+    color: var(--azul-900);
+}
+
+.servicios-main-title--seguridad {
+    color: var(--naranja);
+}
+
+/* Grillas de Servicios */
+.services-block-grid {
+    display: grid !important;
+    gap: 1.25rem !important;
+    margin-bottom: var(--sp-4) !important;
+}
+
+.services-block-grid--salud {
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.services-block-grid--seguridad {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Tarjetas de Servicio */
+.service-card {
+    background: var(--blanco) !important;
+    border: 1px solid var(--gris-200) !important;
+    border-radius: 16px !important;
+    padding: 1.75rem 1.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.15rem !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animación de entrada por JS */
+.service-card.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.service-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: var(--azul-200) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.services-block-grid--seguridad .service-card:hover {
+    border-color: var(--naranja-200) !important;
+}
+
+/* Contenedor de Iconos */
+.service-card-icon-wrap {
+    width: 64px !important;
+    height: 64px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: none !important;
+}
+
+.service-card-icon-wrap img {
+    width: 56px !important;
+    height: 56px !important;
+    object-fit: contain !important;
+    transition: transform 0.3s ease !important;
+}
+
+.service-card span {
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    color: var(--azul-900) !important;
+    line-height: 1.4 !important;
+    font-family: var(--font-body);
+}
+
+/* Botones de acción */
+.serv-action-container {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin-top: 1.5rem !important;
+}
+
+.btn-request-service {
+    font-weight: 700 !important;
+    font-size: var(--fs-sm) !important;
+    padding: 0.9rem 2.25rem !important;
+    border-radius: 50px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    text-decoration: none !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+.btn-request-service--blue {
+    background: var(--azul-900) !important;
+    color: var(--blanco) !important;
+    border: 1px solid var(--azul-900) !important;
+}
+
+.btn-request-service--blue:hover {
+    background: var(--azul) !important;
+    border-color: var(--azul) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(19, 66, 149, 0.25) !important;
+}
+
+.btn-request-service--orange {
+    background: var(--naranja) !important;
+    color: var(--blanco) !important;
+    border: 1px solid var(--naranja) !important;
+}
+
+.btn-request-service--orange:hover {
+    background: var(--naranja-600) !important;
+    border-color: var(--naranja-600) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.25) !important;
+}
+
+/* ==========================================
+   Sección Unidad Móvil (OHS EXPRESS)
+   ========================================== */
+.unidad-movil-section {
+    background: var(--azul-900) !important;
+    color: var(--blanco) !important;
+    padding: var(--sp-6) 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.unidad-movil-grid {
+    display: grid !important;
+    grid-template-columns: 1.1fr 0.9fr !important;
+    gap: 3.5rem !important;
+    align-items: center !important;
+}
+
+.movil-content-block {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    z-index: 2 !important;
+}
+
+.movil-logo {
+    height: 52px !important;
+    width: auto !important;
+    align-self: flex-start !important;
+    object-fit: contain !important;
+}
+
+.movil-title {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    color: var(--blanco) !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+    text-transform: uppercase !important;
+}
+
+.movil-desc {
+    font-size: var(--fs-base) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+}
+
+.btn-request-service--outline-white {
+    background: transparent !important;
+    color: var(--blanco) !important;
+    border: 2px solid var(--blanco) !important;
+}
+
+.btn-request-service--outline-white:hover {
+    background: var(--blanco) !important;
+    color: var(--azul-900) !important;
+    transform: translateY(-2px) !important;
+}
+
+.movil-image-block {
+    position: relative !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    aspect-ratio: 4 / 3 !important;
+}
+
+.movil-image-block img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* ==========================================
+   Sección Formación de Brigadistas
+   ========================================== */
+.brigadistas-section {
+    background: var(--blanco) !important;
+    padding: var(--sp-6) 0 !important;
+}
+
+.brigadistas-grid {
+    display: grid !important;
+    grid-template-columns: 0.95fr 1.05fr !important;
+    gap: 3.5rem !important;
+    align-items: center !important;
+    margin-bottom: 2.5rem !important;
+}
+
+.brigadistas-image-block {
+    position: relative !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    aspect-ratio: 4 / 3 !important;
+}
+
+.brigadistas-image-block img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.brigadistas-content-block {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+}
+
+.brigadistas-title {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    color: var(--azul-900) !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+}
+
+.brigadistas-desc {
+    font-size: var(--fs-base) !important;
+    color: var(--gris-700) !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+}
+
+/* Lista de Capacitaciones Inferior */
+.brigadistas-topics-container {
+    border-top: 1px solid var(--gris-200) !important;
+    padding-top: 2rem !important;
+}
+
+.topics-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem 3rem !important;
+}
+
+.topic-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    font-size: 0.95rem !important;
+    color: var(--azul-900) !important;
+    font-weight: 600 !important;
+}
+
+.topic-item-icon {
+    color: var(--naranja) !important;
+    font-weight: 900 !important;
+    font-size: 0.8rem !important;
+    flex-shrink: 0 !important;
+}
+
+/* ==========================================
+   Responsive Breakpoints
+   ========================================== */
+@media (max-width: 991px) {
+    .services-block-grid--salud {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .services-block-grid--seguridad {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .unidad-movil-grid,
+    .brigadistas-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+
+    .brigadistas-grid {
+        direction: rtl !important; /* Mueve el copy hacia arriba en el stack */
+    }
+
+    .brigadistas-content-block,
+    .brigadistas-image-block {
+        direction: ltr !important; /* Restaura dirección de lectura */
+    }
+    
+    .movil-logo {
+        align-self: center !important;
+    }
+
+    .movil-title, .brigadistas-title {
+        font-size: 1.85rem !important;
+        text-align: center !important;
+    }
+
+    .movil-desc, .brigadistas-desc {
+        text-align: center !important;
+    }
+
+    .movil-content-block .btn-request-service,
+    .brigadistas-content-block .btn-request-service {
+        align-self: center !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-block-grid--salud,
+    .services-block-grid--seguridad {
+        grid-template-columns: 1fr !important;
+        gap: 0.9rem !important;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .servicios-main-title {
+        font-size: 1.65rem !important;
+        text-align: center !important;
+    }
+
+    .serv-action-container {
+        justify-content: center !important;
+    }
+
+    .btn-request-service {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}

@@ -2,11 +2,6 @@
    productos.css — Estilos para el Catálogo de EPP
    ========================================================= */
 
-.prod-active {
-  color: var(--azul) !important;
-  font-weight: 700;
-}
-
 /* =========================================================
    HERO
    ========================================================= */
@@ -139,7 +134,7 @@
 }
 
 .prod-help-box {
-  background: linear-gradient(135deg, var(--azul-900) 0%, var(--azul) 100%);
+  background: var(--azul-900);
   color: var(--blanco);
 }
 

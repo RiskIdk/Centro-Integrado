@@ -3,13 +3,6 @@
    Depende de styles.css para las variables y utilidades base
    ========================================================= */
 
-/* Enlace activo en la nav de esta página */
-.main-nav a.active,
-.dropdown-trigger.active {
-  color: var(--azul) !important;
-  font-weight: 700;
-}
-
 /* HERO */
 .part-hero {
   position: relative;
@@ -212,7 +205,7 @@
 /* CTA BANNER */
 .part-cta-section {
   padding: var(--sp-6) 0;
-  background: linear-gradient(135deg, var(--azul-900) 0%, var(--azul) 100%);
+  background: var(--azul-900);
   color: var(--blanco);
   text-align: center;
   position: relative;

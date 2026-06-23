@@ -2,12 +2,6 @@
    encuentranos.css — Estilos exclusivos para encuentranos.html
    ========================================================= */
 
-/* ---- Nav activo ---- */
-.enc-active {
-  color: var(--azul) !important;
-  font-weight: 700;
-}
-
 /* =========================================================
    HERO
    ========================================================= */
@@ -334,7 +328,7 @@
    CTA Strip
    ========================================================= */
 .enc-cta-strip {
-  background: linear-gradient(135deg, var(--azul-900) 0%, var(--azul) 100%);
+  background: var(--azul-900);
   padding: var(--sp-6) 0;
   color: var(--blanco);
 }

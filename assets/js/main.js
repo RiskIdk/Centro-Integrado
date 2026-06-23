@@ -740,4 +740,40 @@
       updateSliderPosition();
     });
   }
+
+  // --- ACORDION DE TARJETAS EN ¿QUÉ SOLUCIONAMOS? ---
+  var accordionCards = document.querySelectorAll(".sol-accordion-card");
+  accordionCards.forEach(function (card) {
+    card.addEventListener("click", function () {
+      var isActive = card.classList.contains("active");
+
+      // Cerrar las demás tarjetas
+      accordionCards.forEach(function (c) {
+        c.classList.remove("active");
+        c.setAttribute("aria-expanded", "false");
+        var body = c.querySelector(".sol-card-body");
+        if (body) {
+          body.style.maxHeight = null;
+        }
+      });
+
+      // Si no estaba activa, abrirla
+      if (!isActive) {
+        card.classList.add("active");
+        card.setAttribute("aria-expanded", "true");
+        var body = card.querySelector(".sol-card-body");
+        if (body) {
+          body.style.maxHeight = body.scrollHeight + "px";
+        }
+      }
+    });
+
+    // Accesibilidad con teclado
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
 })();

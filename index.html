@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -23,6 +23,7 @@
 
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/styles-responsive.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
   <link rel="stylesheet" href="assets/css/styles-home.css" />
 </head>
 
@@ -57,10 +58,10 @@
         </div>
 
         <div class="nav-item-dropdown">
-          <a href="#servicios" class="dropdown-trigger">Servicios <span class="arrow-down">▾</span></a>
+          <a href="servicios.html" class="dropdown-trigger">Servicios <span class="arrow-down">▾</span></a>
           <div class="dropdown-menu">
-            <a href="#servicios">Salud Ocupacional</a>
-            <a href="#servicios">Seguridad Industrial</a>
+            <a href="servicios.html#ocupacional">Salud Ocupacional</a>
+            <a href="servicios.html#industrial">Seguridad Industrial</a>
             <a href="particulares.html">Particular</a>
           </div>
         </div>
@@ -148,7 +149,7 @@
               <span class="d-line3">360</span>
             </h1>
             <div class="hero-actions">
-              <a href="#servicios" class="btn btn-outline-white">Conoce nuestros servicios</a>
+              <a href="servicios.html" class="btn btn-outline-white">Conoce nuestros servicios</a>
               <a href="contacto.html" class="btn btn-outline-white">Contáctanos</a>
             </div>
           </div>
@@ -188,7 +189,7 @@
         <div class="fuerza-halftone-bl"></div>
         <div class="fuerza-halftone-br"></div>
       </div>
-      <div class="container fuerza-inner">
+      <div class="fuerza-inner">
         <p class="section-kicker">ES UNA SOLA FUERZA</p>
         <h2 id="fuerza-title" class="section-title">Dos marcas,<br>un mismo compromiso</h2>
 
@@ -222,7 +223,7 @@
                 <li>Plataforma de resultados médicos</li>
                 <li>Ingreso de indicadores al SUT</li>
               </ul>
-              <a href="encuentranos.html" class="btn-services-blue">Conoce más <span>›</span></a>
+              <a href="servicios.html#ocupacional" class="btn-services-blue">Conoce más <span>›</span></a>
             </div>
             <div class="serv-card-media">
               <img src="assets/img/Homepage/doctor1.PNG" alt="Médico Ocupacional - OHS Centro Médico" />
@@ -239,7 +240,7 @@
                 <li>Capacitaciones de seguridad (SUT)</li>
                 <li>Inspección y reemplazo de EPP</li>
               </ul>
-              <a href="productos.html" class="btn-services-orange">Conoce más <span>›</span></a>
+              <a href="servicios.html#industrial" class="btn-services-orange">Conoce más <span>›</span></a>
             </div>
             <div class="serv-card-media">
               <img src="assets/img/Homepage/seguridad1.PNG" alt="Profesional de Seguridad Industrial - Grupo Renee" />
@@ -264,7 +265,6 @@
 
           <div class="risks-grid">
 
-            <!-- FÍSICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
                 <img src="assets/img/Iconos/riesgos/fisico.svg" alt="Riesgo Físico" />
@@ -272,7 +272,6 @@
               <span>Físico</span>
             </div>
 
-            <!-- QUÍMICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
                 <img src="assets/img/Iconos/riesgos/quimico.svg" alt="Riesgo Químico" />
@@ -280,7 +279,6 @@
               <span>Químico</span>
             </div>
 
-            <!-- BIOLÓGICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
                 <img src="assets/img/Iconos/riesgos/biologico.svg" alt="Riesgo Biológico" />
@@ -288,7 +286,6 @@
               <span>Biológico</span>
             </div>
 
-            <!-- ERGONÓMICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
                 <img src="assets/img/Iconos/riesgos/ergonomico.svg" alt="Riesgo Ergonómico" />
@@ -296,7 +293,6 @@
               <span>Ergonómico</span>
             </div>
 
-            <!-- MECÁNICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
                 <img src="assets/img/Iconos/riesgos/mecanico.svg" alt="Riesgo Mecánico" />
@@ -304,7 +300,6 @@
               <span>Mecánico</span>
             </div>
 
-            <!-- PSICOSOCIAL -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
                 <img src="assets/img/Iconos/riesgos/psicosocial.svg" alt="Riesgo Psicosocial" />
@@ -319,15 +314,94 @@
 
         <div class="sol-right-col">
           <div class="sol-list-items">
-            <div class="sol-list-card">Evaluación médica ocupacional</div>
-            <div class="sol-list-card">Dotación y asesoría en Equipos de Protección Personal (EPP)</div>
-            <div class="sol-list-card">Prevención y reducción de accidentes laborales</div>
-            <div class="sol-list-card">Capacitaciones en salud y seguridad</div>
-            <div class="sol-list-card">Cumplimiento normativo y prevención de multas del SUT</div>
-            <div class="sol-list-card">Atención in situ con unidad móvil</div>
-            <div class="sol-list-card">Evaluación médica ocupacional</div>
-            <div class="sol-list-card">Cobertura nacional para empresas</div>
-            <div class="sol-list-card">Gestión e identificación de riesgos laborales</div>
+            <div class="sol-list-card sol-accordion-card" role="button" aria-expanded="false" tabindex="0">
+              <div class="sol-card-header">
+                <span class="sol-card-title">Evaluación médica ocupacional</span>
+                <span class="sol-card-arrow">▼</span>
+              </div>
+              <div class="sol-card-body">
+                <p>Realizamos exámenes ocupacionales de ingreso, periódicos y de salida para monitorear el estado de
+                  salud de los colaboradores y garantizar su aptitud para el trabajo.</p>
+              </div>
+            </div>
+
+            <div class="sol-list-card sol-accordion-card" role="button" aria-expanded="false" tabindex="0">
+              <div class="sol-card-header">
+                <span class="sol-card-title">Prevención y reducción de accidentes laborales</span>
+                <span class="sol-card-arrow">▼</span>
+              </div>
+              <div class="sol-card-body">
+                <p>Implementamos acciones preventivas orientadas a minimizar riesgos, fortalecer la seguridad y proteger
+                  la integridad de los trabajadores.</p>
+              </div>
+            </div>
+
+            <div class="sol-list-card sol-accordion-card" role="button" aria-expanded="false" tabindex="0">
+              <div class="sol-card-header">
+                <span class="sol-card-title">Cumplimiento normativo y prevención de multas del SUT</span>
+                <span class="sol-card-arrow">▼</span>
+              </div>
+              <div class="sol-card-body">
+                <p>Brindamos asesoría especializada para que las empresas cumplan con la normativa vigente en salud y
+                  seguridad ocupacional, evitando sanciones y observaciones.</p>
+              </div>
+            </div>
+
+            <div class="sol-list-card sol-accordion-card" role="button" aria-expanded="false" tabindex="0">
+              <div class="sol-card-header">
+                <span class="sol-card-title">Gestión e identificación de riesgos laborales</span>
+                <span class="sol-card-arrow">▼</span>
+              </div>
+              <div class="sol-card-body">
+                <p>Identificamos, evaluamos y controlamos los tipos de riesgos presentes en cada puesto de trabajo
+                  mediante herramientas técnicas como la matriz IPER.</p>
+              </div>
+            </div>
+
+            <div class="sol-list-card sol-accordion-card" role="button" aria-expanded="false" tabindex="0">
+              <div class="sol-card-header">
+                <span class="sol-card-title">Dotación y asesoría en Equipos de Protección Personal (EPP)</span>
+                <span class="sol-card-arrow">▼</span>
+              </div>
+              <div class="sol-card-body">
+                <p>Ofrecemos soluciones en EPP adecuadas a cada actividad laboral, garantizando la protección de los
+                  colaboradores frente a riesgos específicos.</p>
+              </div>
+            </div>
+
+            <div class="sol-list-card sol-accordion-card" role="button" aria-expanded="false" tabindex="0">
+              <div class="sol-card-header">
+                <span class="sol-card-title">Capacitaciones en salud y seguridad</span>
+                <span class="sol-card-arrow">▼</span>
+              </div>
+              <div class="sol-card-body">
+                <p>Desarrollamos programas de formación para fortalecer la cultura preventiva y promover prácticas
+                  seguras dentro de la organización.</p>
+              </div>
+            </div>
+
+            <div class="sol-list-card sol-accordion-card" role="button" aria-expanded="false" tabindex="0">
+              <div class="sol-card-header">
+                <span class="sol-card-title">Atención in situ con unidad móvil</span>
+                <span class="sol-card-arrow">▼</span>
+              </div>
+              <div class="sol-card-body">
+                <p>Llevamos nuestros servicios directamente a las instalaciones de la empresa, optimizando tiempos y
+                  facilitando la atención del personal.</p>
+              </div>
+            </div>
+
+            <div class="sol-list-card sol-accordion-card" role="button" aria-expanded="false" tabindex="0">
+              <div class="sol-card-header">
+                <span class="sol-card-title">Cobertura nacional para empresas</span>
+                <span class="sol-card-arrow">▼</span>
+              </div>
+              <div class="sol-card-body">
+                <p>Atendemos organizaciones en todo el país, ofreciendo soluciones integrales adaptadas a las
+                  necesidades de cada sector productivo.</p>
+              </div>
+            </div>
+
             <div class="sol-list-card sol-list-card--orange">
               <span>Haz clic en cualquiera para conocerlos</span>
               <span>›</span>
@@ -341,7 +415,7 @@
     <section class="particulares-banner" aria-labelledby="part-banner-title">
       <div class="container part-banner-inner">
         <div class="part-banner-content">
-          <img src="assets/img/logo-ohs.png" alt="OHS Centro Médico Logo" class="part-banner-logo" />
+          <img src="assets/img/Iconos/logos/ohs blanco logo.svg" alt="OHS Centro Médico Logo" class="part-banner-logo" />
           <h2 id="part-banner-title" class="part-banner-title">¿Buscas atención médica particular para ti o tu familia?
           </h2>
           <p class="part-banner-desc">Accede a consultas de medicina general, especialidades y más, con la calidad y
@@ -353,9 +427,6 @@
               <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </a>
-        </div>
-        <div class="part-banner-img-wrap">
-          <img src="assets/img/Homepage/doctor niño.png" alt="Médico Ocupacional y Niño - OHS" loading="lazy" />
         </div>
       </div>
     </section>
@@ -434,10 +505,28 @@
               <img src="https://img.youtube.com/vi/CKonDD2pwNw/maxresdefault.jpg"
                 alt="Miniatura de video Feria - AgroAzucar" loading="lazy"
                 onerror="this.src='https://img.youtube.com/vi/CKonDD2pwNw/hqdefault.jpg'" />
+              <div class="yt-play-btn" aria-hidden="true">
+                <svg viewBox="0 0 68 48" width="68" height="48">
+                  <path
+                    d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
+                    fill="#FF0000" />
+                  <path d="M45 24 27 14v20" fill="#fff" />
+                </svg>
+              </div>
               <span class="yt-duration">14:07</span>
             </div>
             <div class="yt-info">
-              <span class="yt-info-title">Feria - AgroAzucar</span>
+              <div class="yt-info-left">
+                <svg class="yt-logo-small" viewBox="0 0 90 20" width="60" height="14" aria-label="YouTube">
+                  <path
+                    d="M27.97 3.42C27.6 2.05 26.55 1 25.18.63 22.96 0 14.11 0 14.11 0S5.27 0 3.05.63C1.68 1 .63 2.05.26 3.42-.37 5.64-.37 10-.37 10s0 4.36.63 6.58c.37 1.37 1.42 2.41 2.79 2.78C5.27 20 14.11 20 14.11 20s8.85 0 11.07-.64c1.37-.37 2.42-1.41 2.79-2.78.63-2.22.63-6.58.63-6.58s0-4.36-.63-6.58zM11.37 14.29V5.71L18.57 10l-7.2 4.29z"
+                    fill="#FF0000" />
+                  <path
+                    d="M33.5 12.82V7.35l1.66 5.47h1.17l1.64-5.47v5.47h1.27V5.52h-1.93l-1.47 4.9-1.47-4.9h-1.93v7.3H33.5zm9.72.12c1.47 0 2.38-.94 2.38-2.73V8.78c0-1.79-.91-2.73-2.38-2.73s-2.38.94-2.38 2.73v1.43c0 1.79.91 2.73 2.38 2.73zm0-1.08c-.64 0-.97-.41-.97-1.23V8.59c0-.82.33-1.23.97-1.23s.97.41.97 1.23v2.04c0 .82-.33 1.23-.97 1.23zm5.79 1.08c.64 0 1.09-.32 1.37-.78v.66h1.33V6.17h-1.33v4.7c0 .5-.27.8-.72.8s-.72-.3-.72-.8V6.17h-1.33v4.93c0 1.05.55 1.84 1.4 1.84zm5.81-.12V9.18l1.82 3.64h1.29V5.52h-1.27v3.6L55.02 5.52h-1.27v7.3h1.27zm6.97 0V6.6h1.46V5.52h-4.22V6.6h1.46v6.22h1.3zm3.06 0v-2.99h1.02l1.11 2.99h1.38l-1.24-3.27c.67-.31 1.06-.99 1.06-1.92 0-1.4-.8-2.11-2.21-2.11h-2.39v7.3h1.27zm0-4.06V6.6h1c.66 0 1 .31 1 .95v.16c0 .64-.34.95-1 .95h-1zm6.56 4.18c.86 0 1.44-.35 1.79-.87v.75h1.27V9.05c0-1.7-.79-2.52-2.31-2.52-1.42 0-2.23.73-2.3 1.97h1.27c.05-.57.36-.9.97-.9.63 0 .97.38.97 1.13v.35h-.87c-1.67 0-2.52.68-2.52 1.97 0 1.12.69 1.79 1.73 1.79zm.4-1.01c-.5 0-.83-.28-.83-.75 0-.55.36-.83 1.2-.83h.7v.77c0 .49-.44.81-1.07.81z"
+                    fill="#282828" />
+                </svg>
+                <span class="yt-info-title">Feria - AgroAzucar</span>
+              </div>
               <span class="yt-menu-icon" aria-hidden="true">⋮</span>
             </div>
           </a>
@@ -445,43 +534,10 @@
       </div>
     </section>
 
-    <!-- ===================== CONTACTO ===================== -->
-    <section class="section contacto" id="contacto" aria-labelledby="con-title">
-      <div class="container">
-        <p class="section-kicker">Contáctanos</p>
-        <h2 id="con-title" class="section-title">Hablemos de la seguridad de tu equipo</h2>
-
-        <div class="contacto-grid">
-          <article class="con-card con-card--ohs">
-            <img class="con-logo" src="assets/img/logo-ohs.png" alt="OHS Centro Médico" width="716" height="358"
-              loading="lazy" />
-            <h3>Centro Médico OHS</h3>
-            <ul class="con-list">
-              <li><a href="https://wa.me/593992631451">WhatsApp: 099 263 1451</a></li>
-              <li><a href="https://instagram.com/centromedico_ohs">Instagram: @centromedico_ohs</a></li>
-              <li><a href="https://facebook.com/centromedicoohs">Facebook: Centro Médico OHS</a></li>
-              <li><a href="mailto:ventas@ohs.com.ec">ventas@ohs.com.ec</a></li>
-            </ul>
-          </article>
-
-          <article class="con-card con-card--renee">
-            <img class="con-logo" src="assets/img/logo-renee.png" alt="Grupo Renee" width="855" height="339"
-              loading="lazy" />
-            <h3>Grupo Renee</h3>
-            <ul class="con-list">
-              <li><a href="https://wa.me/593984064249">WhatsApp: 098 406 4249</a></li>
-              <li><a href="https://instagram.com/grupo_renee">Instagram: @grupo_renee</a></li>
-              <li><a href="https://facebook.com/gruporenee">Facebook: Grupo Renee</a></li>
-              <li><a href="mailto:jefatura.ventas@gruporenee.com.ec">jefatura.ventas@gruporenee.com.ec</a></li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ===================== REDES SOCIALES ===================== -->
-  <section class="social-blue-section" aria-label="Redes sociales">
+  <section class="social-blue-section" aria-label="Redes sociales" id="contacto">
     <div class="container">
       <h2 class="social-title">Accede a nuestras redes sociales</h2>
       <div class="social-grid">
@@ -580,89 +636,11 @@
         <p>Centro <strong>Integrado</strong> 360</p>
         <p class="footer-claim">"La evolución de la salud y seguridad"</p>
       </div>
-      <div class="footer-logos">
-        <img src="assets/img/logo-ohs.png" alt="OHS Centro Médico" width="716" height="358" loading="lazy" />
-        <img src="assets/img/logo-renee.png" alt="Grupo Renee" width="855" height="339" loading="lazy" />
-      </div>
-
-      <div class="footer-social-section">
-        <div class="footer-social-col">
-          <h4>OHS Centro Médico</h4>
-          <div class="footer-social-links">
-            <a href="https://www.facebook.com/share/1KiGc3uQm6/?mibextid=wwXIfr" target="_blank" rel="noopener"
-              aria-label="Facebook OHS">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/centromedico_ohs?igsh=dnZ5N3U3dGNtNzhu" target="_blank" rel="noopener"
-              aria-label="Instagram OHS">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/centro-m%C3%A9dico-ohs-45673b123/" target="_blank" rel="noopener"
-              aria-label="LinkedIn OHS">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </a>
-            <a href="https://www.youtube.com/@CentroMedico_OHS/featured" target="_blank" rel="noopener"
-              aria-label="YouTube OHS">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="footer-social-col">
-          <h4>Grupo Renee</h4>
-          <div class="footer-social-links">
-            <a href="https://www.facebook.com/share/14eQuZJYQS2/?mibextid=wwXIf" target="_blank" rel="noopener"
-              aria-label="Facebook Grupo Renee">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/grupo_renee?igsh=ZjVkb3Bjemh2Ynd6" target="_blank" rel="noopener"
-              aria-label="Instagram Grupo Renee">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/grupo-renee/" target="_blank" rel="noopener"
-              aria-label="LinkedIn Grupo Renee">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </a>
-            <a href="https://www.youtube.com/@grureneesas.a.1385" target="_blank" rel="noopener"
-              aria-label="YouTube Grupo Renee">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
       <p class="footer-legal">© <span id="year"></span> Centro Integrado 360 · OHS Centro Médico &amp; Grupo Renee.
         Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- ===================== FAQ CHATBOX ===================== -->
   <div class="faq-chatbox" id="faqChatbox">
     <button class="chatbox-trigger" id="chatboxTrigger" aria-label="Abrir chat de preguntas frecuentes"
       aria-expanded="false" aria-controls="chatboxWindow">

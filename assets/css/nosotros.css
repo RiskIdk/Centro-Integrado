@@ -3,16 +3,6 @@
    Depende de styles.css para las variables y utilidades base
    ========================================================= */
 
-/* ---- Enlace activo en la nav de esta página ---- */
-.main-nav a.active,
-.dropdown-trigger.active {
-  color: var(--azul) !important;
-  font-weight: 700;
-}
-.dropdown-trigger.active::after {
-  width: 100%;
-}
-
 /* =========================================================
    HERO — ¿Quiénes somos?
    2 columnas: copia izquierda | foto derecha
@@ -242,10 +232,10 @@
   max-width: 64ch;
 }
 
-/* Grid de 3 columnas */
+/* Grid de 2 columnas */
 .nos-porque-layout {
   display: grid;
-  grid-template-columns: 1fr 240px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--sp-4);
   align-items: center;
 }
