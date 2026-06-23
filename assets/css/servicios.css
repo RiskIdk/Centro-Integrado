@@ -207,16 +207,20 @@
 
 .movil-image-block {
     position: relative !important;
-    border-radius: 20px !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
-    aspect-ratio: 4 / 3 !important;
+    box-shadow: none !important;
+    aspect-ratio: 0.69 / 1 !important;
+    max-width: 450px !important;
+    width: 100% !important;
+    justify-self: center !important;
 }
 
 .movil-image-block img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+    object-position: left center !important; /* Muestra el remolque completo de arriba a abajo y recorta la camioneta a la derecha */
     display: block !important;
 }
 
