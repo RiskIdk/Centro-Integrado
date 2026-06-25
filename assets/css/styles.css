@@ -1941,6 +1941,14 @@ a.eco-card:focus-visible,
   gap: .2rem;
 }
 
+.footer-logo-main {
+  height: 180px;
+  width: auto;
+  align-self: flex-start;
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
 .brand-360--lg {
   font-size: 2.6rem;
   color: var(--naranja);

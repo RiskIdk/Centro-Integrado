@@ -1017,11 +1017,7 @@
     flex-shrink: 0;
 }
 
-/* ===================== FOOTER — QUITAR LOGOS ===================== */
-
-/* .footer-logos {
-    display: none !important;
-} */
+/* ===================== FOOTER — LOGOS VISIBILITY ===================== */
 
 /* ===================== BANNER OVERRIDES FOR RESPONSIVE ===================== */
 @media (max-width: 980px) {
