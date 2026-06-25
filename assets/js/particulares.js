@@ -83,7 +83,7 @@
       var timeVal = document.getElementById("formTime").value;
       var specialtyVal = formSpecialty.value;
 
-      var waNumber = "593992631451"; // Contacto OHS
+      var waNumber = "593992602555"; // Contacto OHS
       
       // Construir el mensaje formateado para WhatsApp
       var text = "Hola OHS Centro Médico. Deseo agendar una cita médica de especialidad.\n\n" +

@@ -684,7 +684,7 @@
     }
 
     // Armar el mensaje para WhatsApp
-    var waNumber = "593984064249"; // Teléfono de Grupo Renee/OHS para cotizaciones
+    var waNumber = "593999856207"; // Teléfono de Grupo Renee/OHS para cotizaciones
     var greeting = "¡Hola Centro Integrado 360 Ecuador! Me gustaría solicitar una cotización para mi empresa.\n\n";
     var clientInfo = `*Cliente:* ${nameVal}\n`;
     if (companyVal) {

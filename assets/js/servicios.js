@@ -39,16 +39,16 @@
 
         if (targetType === "salud") {
           message = encodeURIComponent("Hola, me gustaría solicitar información sobre los Servicios de Salud Ocupacional.");
-          whatsappUrl = "https://wa.me/593992631451?text=" + message;
+          whatsappUrl = "https://wa.me/593992602555?text=" + message;
         } else if (targetType === "seguridad") {
           message = encodeURIComponent("Hola, me gustaría solicitar información sobre los Servicios de Seguridad Industrial.");
-          whatsappUrl = "https://wa.me/593984064249?text=" + message;
+          whatsappUrl = "https://wa.me/593999856207?text=" + message;
         } else if (targetType === "movil") {
           message = encodeURIComponent("Hola, me gustaría solicitar información sobre la Unidad Médica Móvil.");
-          whatsappUrl = "https://wa.me/593992631451?text=" + message;
+          whatsappUrl = "https://wa.me/593992602555?text=" + message;
         } else if (targetType === "brigadistas") {
           message = encodeURIComponent("Hola, me gustaría solicitar información sobre el Programa de Formación de Brigadistas.");
-          whatsappUrl = "https://wa.me/593984064249?text=" + message;
+          whatsappUrl = "https://wa.me/593999856207?text=" + message;
         }
 
         if (whatsappUrl) {

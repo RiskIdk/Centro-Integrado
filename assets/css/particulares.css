@@ -364,3 +364,28 @@
   gap: 1rem;
 }
 
+/* Fix for the WhatsApp schedule button inside CTA banner */
+.part-cta-btns .part-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 600 !important;
+  font-size: var(--fs-base) !important;
+  padding: .95rem 1.6rem !important;
+  border-radius: var(--radius-pill) !important;
+  background: var(--naranja) !important;
+  color: var(--blanco) !important;
+  border: 2px solid transparent !important;
+  cursor: pointer !important;
+  min-height: 48px !important;
+  box-shadow: none !important;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .2s !important;
+}
+
+.part-cta-btns .part-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-md) !important;
+  color: var(--blanco) !important;
+  background: var(--naranja-600) !important;
+}
+

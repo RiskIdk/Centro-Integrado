@@ -419,7 +419,7 @@
       {
         key: "contacto",
         keywords: ["contacto", "whatsapp", "telefono", "correo", "mail", "llamar", "escribir", "redes", "celular", "facebook", "instagram", "web", "asesor", "cotizar", "cotizacion", "precio", "precios", "costo", "costos"],
-        answer: "Comunícate con nosotros para cotizaciones o dudas:<br>• <b>Salud Ocupacional (OHS):</b> WhatsApp al <a href='https://wa.me/593992631451' target='_blank'>099 263 1451</a> o ventas@ohs.com.ec.<br>• <b>Seguridad Industrial (Grupo Renee):</b> WhatsApp al <a href='https://wa.me/593984064249' target='_blank'>098 406 4249</a> o jefatura.ventas@gruporenee.com.ec."
+        answer: "Comunícate con nosotros para cotizaciones o dudas:<br>• <b>Salud Ocupacional (OHS):</b> WhatsApp al <a href='https://wa.me/593992602555' target='_blank'>099 260 2555</a> o ventas@ohs.com.ec.<br>• <b>Seguridad Industrial (Grupo Renee):</b> WhatsApp al <a href='https://wa.me/593999856207' target='_blank'>099 985 6207</a> o jefatura.ventas@gruporenee.com.ec."
       },
       {
         key: "movil",
@@ -467,7 +467,7 @@
         return bestMatch.answer;
       }
 
-      return "Lo siento, no tengo una respuesta exacta para eso. ¿Podrías intentar con palabras clave como 'servicios', 'sucursales', 'horarios', 'contacto' o 'unidad móvil'? También puedes escribir a nuestros asesores vía WhatsApp:<br>• <b>Salud (OHS):</b> <a href='https://wa.me/593992631451' target='_blank'>099 263 1451</a><br>• <b>Seguridad (Renee):</b> <a href='https://wa.me/593984064249' target='_blank'>098 406 4249</a>";
+      return "Lo siento, no tengo una respuesta exacta para eso. ¿Podrías intentar con palabras clave como 'servicios', 'sucursales', 'horarios', 'contacto' o 'unidad móvil'? También puedes escribir a nuestros asesores vía WhatsApp:<br>• <b>Salud (OHS):</b> <a href='https://wa.me/593992602555' target='_blank'>099 260 2555</a><br>• <b>Seguridad (Renee):</b> <a href='https://wa.me/593999856207' target='_blank'>099 985 6207</a>";
     }
 
     function addUserMessage(text) {

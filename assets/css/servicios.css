@@ -108,12 +108,12 @@
 
 .btn-request-service {
     font-weight: 700 !important;
-    font-size: var(--fs-sm) !important;
-    padding: 0.9rem 2.25rem !important;
+    font-size: 0.8rem !important;
+    padding: 0.6rem 1.4rem !important;
     border-radius: 50px !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 0.75rem !important;
+    gap: 0.5rem !important;
     text-decoration: none !important;
     box-shadow: var(--shadow-md) !important;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
@@ -168,6 +168,7 @@
     flex-direction: column !important;
     gap: 1.5rem !important;
     z-index: 2 !important;
+    align-items: flex-start !important;
 }
 
 .movil-logo {
@@ -259,6 +260,7 @@
     display: flex !important;
     flex-direction: column !important;
     gap: 1.5rem !important;
+    align-items: flex-start !important;
 }
 
 .brigadistas-title {
